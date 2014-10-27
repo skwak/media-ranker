@@ -1,0 +1,22 @@
+<h2><%= @book.name %> <small>Written by <%= @book.author %></small></li>
+</h2>
+
+
+<ul>
+  <li>Ranked: <% if @book.rank %>
+                <%= @book.rank %>
+              <% else %>
+                0
+              <% end %></li>
+  <li>Description: <%= @book.description %></li>
+</ul>
+
+<!-- <%= form_for @movie, url: update_movie_path(@movie) do |f| %>
+  <%= f.hidden_field :rank, :value => "1" %>
+  <%= f.submit "Upvote" %>
+<% end %> -->
+
+<%= link_to "Edit #{@book.name}", edit_movie_path(@book) %>
+<%= link_to "Delete #{@book.name}", delete_movie_path(@book) %>
+<%= link_to "All books", books_path %>
+<%= link_to "See all media", home_path %>

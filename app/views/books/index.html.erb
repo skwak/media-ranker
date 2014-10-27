@@ -1,0 +1,22 @@
+<h1>Books</h1>
+
+<table>
+  <colgroup span="3" class="columns"></colgroup>
+  <tr>
+    <th>Ranking</th>
+    <th>Title</th>
+    <th>Upvote</th>
+  </tr>
+
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= book.rank %> DUN DUN DUN</td>
+      <td><%= book.name %></td>
+      <td>UPVOTE LINKS</td>
+    </tr>
+    <% end %>
+
+</table>
+
+<%= link_to "All Media", home_path %>
+<%= link_to "Add Movie", new_book_path %>

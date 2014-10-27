@@ -1,13 +1,31 @@
 Rails.application.routes.draw do
-  get "/movies",                  to: "movies#index",           as: :movies
-  get "/movies/new",              to: "movies#new",             as: :new_movie
-  post "/movies",                 to: "movies#create",          as: :create_movie
-  get "/movies/:id",              to: "movies#show",            as: :movie
-  get "/movies/:id/edit",         to: "movies#edit",            as: :edit_movie
-  patch "/movies/:id",            to: "movies#update",          as: :update_movie
-  get "/movies/:id/delete",       to: "movies#destroy",         as: :delete_movie
-  delete "/movies/:id",           to: "movies#destroy"
-  
+  get     "/movies",                  to: "movies#index",           as: :movies
+  get     "/movies/new",              to: "movies#new",             as: :new_movie
+  post    "/movies",                  to: "movies#create",          as: :create_movie
+  get     "/movies/:id",              to: "movies#show",            as: :movie
+  get     "/movies/:id/edit",         to: "movies#edit",            as: :edit_movie
+  patch   "/movies/:id",              to: "movies#update",          as: :update_movie
+  get     "/movies/:id/delete",       to: "movies#destroy",         as: :delete_movie
+  delete  "/movies/:id",              to: "movies#destroy"
+
+  get     "/albums",                  to: "albums#index",           as: :albums
+  get     "/albums/new",              to: "albums#new",             as: :new_album
+  post    "/albums",                  to: "albums#create",          as: :create_album
+  get     "/albums/:id",              to: "albums#show",            as: :album
+  get     "/albums/:id/edit",         to: "albums#edit",            as: :edit_album
+  patch   "/albums/:id",              to: "albums#update",          as: :update_album
+  get     "/albums/:id/delete",       to: "albums#destroy",         as: :delete_album
+  delete  "/albums/:id",              to: "albums#destroy"
+
+  get     "/books",                   to: "books#index",            as: :books
+  get     "/books/new",               to: "books#new",              as: :new_book
+  post    "/books",                   to: "books#create",           as: :create_book
+  get     "/books/:id",               to: "books#show",             as: :book
+  get     "/books/:id/edit",          to: "books#edit",             as: :edit_book
+  patch   "/books/:id",               to: "books#update",           as: :update_book
+  get     "/books/:id/delete",        to: "books#destroy",          as: :delete_book
+  delete  "/books/:id",               to: "books#destroy"
+
   root "home#index", as: :home
 
   # The priority is based upon order of creation: first created -> highest priority.

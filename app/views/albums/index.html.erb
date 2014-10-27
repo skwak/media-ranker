@@ -1,0 +1,22 @@
+<h1>Albums</h1>
+
+<table>
+  <colgroup span="3" class="columns"></colgroup>
+  <tr>
+    <th>Ranking</th>
+    <th>Title</th>
+    <th>Upvote</th>
+  </tr>
+
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.rank %> DUN DUN DUN</td>
+      <td><%= album.name %></td>
+      <td>UPVOTE LINKS</td>
+    </tr>
+    <% end %>
+
+</table>
+
+<%= link_to "All Media", home_path %>
+<%= link_to "Add Album", new_album_path %>
