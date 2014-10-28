@@ -16,7 +16,7 @@
   <%= f.submit "Upvote" %>
 <% end %> -->
 
-<%= link_to "Edit #{@book.name}", edit_movie_path(@book) %>
-<%= link_to "Delete #{@book.name}", delete_movie_path(@book) %>
+<%= link_to "Edit #{@book.name}", edit_book_path(@book) %>
+<%= link_to "Delete #{@book.name}", delete_book_path(@book) %>
 <%= link_to "All books", books_path %>
 <%= link_to "See all media", home_path %>

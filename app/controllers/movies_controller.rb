@@ -34,6 +34,17 @@ class MoviesController < ApplicationController
     end
   end
 
+  def vote
+    find_movie
+    if !@movie.rank
+      @movie.rank = 1
+    else
+      @movie.rank += 1
+    end
+    @movie.save
+    redirect_to :back
+  end
+
   def destroy
     find_movie
     if @movie.delete

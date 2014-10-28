@@ -11,10 +11,7 @@
   <li>Description: <%= @movie.description %></li>
 </ul>
 
-<!-- <%= form_for @movie, url: update_movie_path(@movie) do |f| %>
-  <%= f.hidden_field :rank, :value => "1" %>
-  <%= f.submit "Upvote" %>
-<% end %> -->
+<%= button_to 'Upvote', movie_vote_path(@movie) %>
 
 <%= link_to "Edit #{@movie.name}", edit_movie_path(@movie) %>
 <%= link_to "Delete #{@movie.name}", delete_movie_path(@movie) %>

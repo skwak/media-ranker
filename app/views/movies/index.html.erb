@@ -11,7 +11,7 @@
   <% @movies.each do |movie| %>
     <tr>
       <td><%= movie.rank %> DUN DUN DUN</td>
-      <td><%= movie.name %></td>
+      <td><%= link_to movie.name, movie_path(movie) %></td>
       <td>UPVOTE LINKS</td>
     </tr>
     <% end %>

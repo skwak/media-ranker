@@ -28,7 +28,7 @@ class BooksController < ApplicationController
   def update
     find_book
     if @book.update(book_params)
-      redirect_to book_path(@album)
+      redirect_to book_path(@book)
     else
       render :edit
     end
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    (params.require(:album).permit(:name, :author, :description, :rank))
+    (params.require(:book).permit(:name, :author, :description, :rank))
   end
 
   def find_book
