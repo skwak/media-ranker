@@ -1,6 +1,6 @@
 <h1>Books</h1>
 
-<table>
+<table class="table table-striped">
   <colgroup span="3" class="columns"></colgroup>
   <tr>
     <th>Ranking</th>
@@ -10,13 +10,13 @@
 
   <% @books.each do |book| %>
     <tr>
-      <td><%= book.rank %> DUN DUN DUN</td>
-      <td><%= book.name %></td>
-      <td>UPVOTE LINKS</td>
+      <td>Ranking: <%= book.rank %></td>
+      <td><%= link_to book.name, book_path(book) %></td>
+      <td><%= button_to 'Upvote', book_vote_path(book), class: "btn btn-default" %></td>
     </tr>
     <% end %>
 
 </table>
 
-<%= link_to "All Media", home_path %>
-<%= link_to "Add Movie", new_book_path %>
+<%= link_to "All Media", home_path, class: "btn btn-default" %>
+<%= link_to "Add Movie", new_book_path, class: "btn btn-default" %>

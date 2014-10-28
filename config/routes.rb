@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "home#index", as: :home
+  
   get     "/movies",                  to: "movies#index",           as: :movies
   get     "/movies/new",              to: "movies#new",             as: :new_movie
   post    "/movies",                  to: "movies#create",          as: :create_movie
@@ -29,7 +31,6 @@ Rails.application.routes.draw do
   get     "/books/:id/delete",        to: "books#destroy",          as: :delete_book
   delete  "/books/:id",               to: "books#destroy",          as: :destroy_book
 
-  root "home#index", as: :home
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

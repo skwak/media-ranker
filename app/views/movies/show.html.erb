@@ -11,9 +11,11 @@
   <li>Description: <%= @movie.description %></li>
 </ul>
 
-<%= button_to 'Upvote', movie_vote_path(@movie), class: "btn-lg btn-default" %>
+<%= button_to 'Upvote', movie_vote_path(@movie), class: "btn-lg btn-default" %><br>
 
-<%= link_to "Edit #{@movie.name}", edit_movie_path(@movie) %>
-<%= link_to "Delete #{@movie.name}", delete_movie_path(@movie) %>
-<%= link_to "All movies", movies_path %>
-<%= link_to "See all media", home_path %>
+<div class="btn-group btn-group-md">
+  <%= link_to "Edit #{@movie.name}", edit_movie_path(@movie), class: "btn btn-default" %>
+  <%= link_to "Delete #{@movie.name}", delete_movie_path(@movie), class: "btn btn-default" %>
+  <%= link_to "All movies", movies_path, class: "btn btn-default" %>
+  <%= link_to "See all media", home_path, class: "btn btn-default" %>
+</div>

@@ -12,8 +12,10 @@
 </ul>
 
 <%= button_to 'Upvote', book_vote_path(@book), class: "btn-lg btn-default" %>
-
-<%= link_to "Edit #{@book.name}", edit_book_path(@book) %>
-<%= link_to "Delete #{@book.name}", delete_book_path(@book) %>
-<%= link_to "All books", books_path %>
-<%= link_to "See all media", home_path %>
+<div class="btn-group btn-group-md">
+  <%= link_to "Edit #{@book.name}", edit_book_path(@book), class: "btn btn-default" %>
+  <%= link_to "Delete #{@book.name}", delete_book_path(@book), class: "btn btn-default" %>
+  <%= link_to "All books", books_path, class: "btn btn-default" %>
+  <%= link_to "See all media", home_path, class: "btn btn-default" %>
+  <%= button_to 'Upvote', album_vote_path(@album), class: "btn-lg btn-default" %><br>
+</div>
