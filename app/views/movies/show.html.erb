@@ -11,7 +11,7 @@
   <li>Description: <%= @movie.description %></li>
 </ul>
 
-<%= button_to 'Upvote', movie_vote_path(@movie) %>
+<%= button_to 'Upvote', movie_vote_path(@movie), class: "btn-lg btn-default" %>
 
 <%= link_to "Edit #{@movie.name}", edit_movie_path(@movie) %>
 <%= link_to "Delete #{@movie.name}", delete_movie_path(@movie) %>

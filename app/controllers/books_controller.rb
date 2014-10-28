@@ -34,6 +34,17 @@ class BooksController < ApplicationController
     end
   end
 
+  def vote
+    find_book
+    if !@book.rank
+      @book.rank = 1
+    else
+      @book.rank += 1
+    end
+    @book.save
+    redirect_to :back
+  end
+
   def destroy
     find_book
     if @book.delete

@@ -11,7 +11,7 @@
   <% @albums.each do |album| %>
     <tr>
       <td><%= album.rank %> DUN DUN DUN</td>
-      <td><%= album.name %></td>
+      <td><%= link_to album.name, album_path(album) %></td>
       <td>UPVOTE LINKS</td>
     </tr>
     <% end %>

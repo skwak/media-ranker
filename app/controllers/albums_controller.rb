@@ -34,6 +34,17 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def vote
+    find_album
+    if !@album.rank
+      @album.rank = 1
+    else
+      @album.rank += 1
+    end
+    @album.save
+    redirect_to :back
+  end
+
   def destroy
     find_album
     if @album.delete

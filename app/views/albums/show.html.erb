@@ -11,6 +11,8 @@
   <li>Description: <%= @album.description %></li>
 </ul>
 
+<%= button_to 'Upvote', album_vote_path(@album), class: "btn-lg btn-default" %><br>
+
 <div class="btn-group btn-group-md">
   <%= link_to "Edit #{@album.name}", edit_album_path(@album), class: "btn btn-default" %>
   <%= link_to "Delete #{@album.name}", delete_album_path(@album), class: "btn btn-default" %>

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   patch   "/movies/:id",              to: "movies#update",          as: :update_movie
   post    "/movies/:id",              to: "movies#vote",            as: :movie_vote
   get     "/movies/:id/delete",       to: "movies#destroy",         as: :delete_movie
-  delete  "/movies/:id",              to: "movies#destroy"
+  delete  "/movies/:id",              to: "movies#destroy",         as: :destroy_movie
 
   get     "/albums",                  to: "albums#index",           as: :albums
   get     "/albums/new",              to: "albums#new",             as: :new_album
@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   get     "/albums/:id",              to: "albums#show",            as: :album
   get     "/albums/:id/edit",         to: "albums#edit",            as: :edit_album
   patch   "/albums/:id",              to: "albums#update",          as: :update_album
+  post    "/albums/:id",              to: "albums#vote",            as: :album_vote
   get     "/albums/:id/delete",       to: "albums#destroy",         as: :delete_album
-  delete  "/albums/:id",              to: "albums#destroy"
+  delete  "/albums/:id",              to: "albums#destroy",         as: :destroy_album
 
   get     "/books",                   to: "books#index",            as: :books
   get     "/books/new",               to: "books#new",              as: :new_book
@@ -24,8 +25,9 @@ Rails.application.routes.draw do
   get     "/books/:id",               to: "books#show",             as: :book
   get     "/books/:id/edit",          to: "books#edit",             as: :edit_book
   patch   "/books/:id",               to: "books#update",           as: :update_book
+  post    "/books/:id",               to: "books#vote",             as: :book_vote
   get     "/books/:id/delete",        to: "books#destroy",          as: :delete_book
-  delete  "/books/:id",               to: "books#destroy"
+  delete  "/books/:id",               to: "books#destroy",          as: :destroy_book
 
   root "home#index", as: :home
 
