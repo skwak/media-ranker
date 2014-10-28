@@ -11,12 +11,9 @@
   <li>Description: <%= @album.description %></li>
 </ul>
 
-<!-- <%= form_for @movie, url: update_movie_path(@movie) do |f| %>
-  <%= f.hidden_field :rank, :value => "1" %>
-  <%= f.submit "Upvote" %>
-<% end %> -->
-
-<%= link_to "Edit #{@album.name}", edit_album_path(@album) %>
-<%= link_to "Delete #{@album.name}", delete_album_path(@album) %>
-<%= link_to "All books", albums_path %>
-<%= link_to "See all media", home_path %>
+<div class="btn-group btn-group-md">
+  <%= link_to "Edit #{@album.name}", edit_album_path(@album), class: "btn btn-default" %>
+  <%= link_to "Delete #{@album.name}", delete_album_path(@album), class: "btn btn-default" %>
+  <%= link_to "All books", albums_path, class: "btn btn-default" %>
+  <%= link_to "See all media", home_path, class: "btn btn-default" %>
+</div>
