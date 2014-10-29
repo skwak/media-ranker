@@ -1,0 +1,9 @@
+<% if @movie.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+  <ul class='error-messages'>
+    <% @movie.errors.each do |column_name, message| %>
+      <li><%= column_name.upcase %> <%= message %></li>
+    <% end %>
+  </ul>
+  </div>
+<% end %>

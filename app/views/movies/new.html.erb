@@ -1,5 +1,7 @@
 <h2>Add a Movie</h2>
 
+<%= render "errormessages" %>
+
 <%= form_for @movie, class: "form-horizontal center" do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
     <%= f.hidden_field :rank, value: 0 %>

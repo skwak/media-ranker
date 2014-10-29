@@ -1,5 +1,7 @@
 <h2>Edit Book</h2>
 
+<%= render "errormessages" %>
+
 <%= form_for @book, class: "form-horizontal center" do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
   <div class="span7 text-center">
