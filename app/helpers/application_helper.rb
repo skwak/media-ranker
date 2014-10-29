@@ -1,11 +1,6 @@
 module ApplicationHelper
-  
-  def no_rank?(rank)
-    if !rank
-      "0"
-    else
-      rank
-    end
-  end
 
+  def no_rank?(rank)
+    rank ? rank : "0"
+  end
 end
