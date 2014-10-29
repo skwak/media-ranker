@@ -10,7 +10,7 @@
 
   <% @albums.each do |album| %>
     <tr>
-      <td>Ranking: <%= no_rank?(album.rank) %></td>
+      <td>Ranking: <%= album.rank %></td>
       <td><%= link_to album.name, album_path(album) %></td>
       <td><%= button_to 'Upvote', album_vote_path(album), class: "btn btn-default" %></td>
     </tr>

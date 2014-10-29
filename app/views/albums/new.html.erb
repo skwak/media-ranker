@@ -2,6 +2,7 @@
 
 <%= form_for @album, class: "form-horizontal center" do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
+    <%= f.hidden_field :rank, value: 0 %>
     <div class="span7 text-center">
       <%= f.submit "Add Album", class: "btn btn-default" %>
     </div>
