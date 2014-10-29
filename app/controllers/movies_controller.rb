@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.all
+    @movies = Movie.all.sort_by { |movie| movie.rank }.reverse
   end
 
   def new

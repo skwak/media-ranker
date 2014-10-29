@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
   def index
-    @albums = Album.all
+    @albums = Album.all.sort_by { |album| album.rank }.reverse
   end
 
   def new

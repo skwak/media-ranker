@@ -10,7 +10,7 @@
 <%= button_to 'Upvote', book_vote_path(@book), class: "btn-lg btn-default" %><br>
 <div class="btn-group btn-group-md">
   <%= link_to "Edit #{@book.name}", edit_book_path(@book), class: "btn btn-default" %>
-  <%= link_to "Delete #{@book.name}", delete_book_path(@book), class: "btn btn-default" %>
+  <%= link_to "Delete #{@book.name}", delete_book_path(@book), method: :delete, class: "btn btn-default" %>
   <%= link_to "All books", books_path, class: "btn btn-default" %>
   <%= link_to "See all media", home_path, class: "btn btn-default" %>
 </div>
