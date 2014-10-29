@@ -1,12 +1,20 @@
-<%= form_for @book do |f| %>
-  <%= f.label :book_title %>:<br>
-  <%= f.text_field :name %><br>
+<div class="form-horizontal">
+  <%= f.label "Title:" %>
+    <div class="col-xs-12">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+</div>
 
-  <%= f.label :author %>:<br>
-  <%= f.text_field :author %><br>
+<div class="form-horizontal">
+  <%= f.label "Author:" %>
+    <div class="col-xs-12">
+      <%= f.text_field :author, class: "form-control" %>
+    </div>
+</div>
 
-  <%= f.label :description %>:<br>
-  <%= f.text_area :description, :cols => 40, :rows => 15 %><br>
-
-  <%= f.submit "Add Book", class: "btn btn-default" %>
-<% end %>
+<div class="form-horizontal">
+  <%= f.label "Description:" %>
+    <div class="col-xs-12">
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+</div>

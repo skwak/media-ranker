@@ -42,7 +42,7 @@ class AlbumsController < ApplicationController
       @album.rank += 1
     end
     @album.save
-    redirect_to :back
+    redirect_to album_path(@album)
   end
 
   def destroy

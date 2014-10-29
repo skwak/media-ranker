@@ -1,24 +1,20 @@
-<%= form_for @movie, class: "form-horizontal center" do |f| %>
-  <div class="form-group">
-    <%= f.label :movie_title, class: "control-label col-sm-2" %>
-    <div class="col-sm-10">
+<div class="form-horizontal">
+  <%= f.label "Title:" %>
+    <div class="col-xs-12">
       <%= f.text_field :name, class: "form-control" %>
     </div>
-  </div>
+</div>
 
-  <div class="form-horizontal">
-    <%= f.label :movie_director, class: "control-label col-sm-2" %>
-      <div class="col-sm-10">
-        <%= f.text_field :director, class: "form-control" %>
-      </div>
-  </div>
+<div class="form-horizontal">
+  <%= f.label "Director:" %>
+    <div class="col-xs-12">
+      <%= f.text_field :director, class: "form-control" %>
+    </div>
+</div>
 
-  <div class="form-horizontal">
-    <%= f.label :description, class: "control-label col-sm-2" %>
-      <div class="col-sm-10">
-        <%= f.text_area :description, class: "form-control" %>
-      </div>
-  </div>
-
-  <%= f.submit "Add Movie", class: "btn btn-default" %>
-<% end %>
+<div class="form-horizontal">
+  <%= f.label "Description:" %>
+    <div class="col-xs-12">
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+</div>

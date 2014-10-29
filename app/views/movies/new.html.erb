@@ -1,3 +1,8 @@
 <h2>Add a Movie</h2>
 
-<%= render "form" %>
+<%= form_for @movie, class: "form-horizontal center" do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+    <div class="span7 text-center">
+      <%= f.submit "Add Movie", class: "btn btn-default" %>
+    </div>
+<% end %>

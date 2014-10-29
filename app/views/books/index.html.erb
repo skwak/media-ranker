@@ -10,7 +10,7 @@
 
   <% @books.each do |book| %>
     <tr>
-      <td>Ranking: <%= book.rank %></td>
+      <td>Ranking: <%= no_rank?(book.rank) %></td>
       <td><%= link_to book.name, book_path(book) %></td>
       <td><%= button_to 'Upvote', book_vote_path(book), class: "btn btn-default" %></td>
     </tr>
@@ -19,4 +19,4 @@
 </table>
 
 <%= link_to "All Media", home_path, class: "btn btn-default" %>
-<%= link_to "Add Movie", new_book_path, class: "btn btn-default" %>
+<%= link_to "Add Book", new_book_path, class: "btn btn-default" %>

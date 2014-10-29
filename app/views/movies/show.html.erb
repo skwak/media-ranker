@@ -3,11 +3,7 @@
 
 
 <ul>
-  <li>Ranked: <% if @movie.rank %>
-                <%= @movie.rank %>
-              <% else %>
-                0
-              <% end %></li>
+  <li>Ranked: <%= no_rank?(@movie.rank) %></li>
   <li>Description: <%= @movie.description %></li>
 </ul>
 

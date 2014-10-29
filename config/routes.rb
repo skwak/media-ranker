@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   root "home#index", as: :home
-  
+
   get     "/movies",                  to: "movies#index",           as: :movies
   get     "/movies/new",              to: "movies#new",             as: :new_movie
   post    "/movies",                  to: "movies#create",          as: :create_movie
   get     "/movies/:id",              to: "movies#show",            as: :movie
   get     "/movies/:id/edit",         to: "movies#edit",            as: :edit_movie
   patch   "/movies/:id",              to: "movies#update",          as: :update_movie
-  post    "/movies/:id",              to: "movies#vote",            as: :movie_vote
+  post    "/movies/:id/",             to: "movies#vote",            as: :movie_vote
   get     "/movies/:id/delete",       to: "movies#destroy",         as: :delete_movie
-  delete  "/movies/:id",              to: "movies#destroy",         as: :destroy_movie
+  delete   "/movies/:id",             to: "movies#destroy",         as: :destroy_movie
 
   get     "/albums",                  to: "albums#index",           as: :albums
   get     "/albums/new",              to: "albums#new",             as: :new_album
