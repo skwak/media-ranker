@@ -36,11 +36,7 @@ class AlbumsController < ApplicationController
 
   def vote
     find_album
-    if !@album.rank
-      @album.rank = 1
-    else
-      @album.rank += 1
-    end
+    @album.rank += 1
     @album.save
     redirect_to album_path(@album)
   end

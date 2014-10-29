@@ -36,11 +36,7 @@ class BooksController < ApplicationController
 
   def vote
     find_book
-    if !@book.rank
-      @book.rank = 1
-    else
-      @book.rank += 1
-    end
+    @book.rank += 1
     @book.save
     redirect_to book_path(@book)
   end
