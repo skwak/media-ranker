@@ -12,10 +12,17 @@
     <header class="row">
       <h1><%= link_to "Media Ranker", home_path %> <small>(づ｡◕‿‿◕｡)づ Because Rankers Like To Rank</small></h1>
       <hr>
-    </header class="row">
+    </header>
 
     <%= yield %>
   </div>
+
+    <div class="container">
+      <p class="text-muted"><hr>
+        A <%= link_to "truekwak", "http://www.twitter.com/truekwak" %> production and a
+        <%= link_to "Media Ranker", "http://media-ranker.herokuapp.com" %> copycat.
+      </p>
+    </div>
 
 </body>
 </html>
