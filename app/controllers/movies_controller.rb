@@ -34,9 +34,9 @@ class MoviesController < ApplicationController
     end
   end
 
+
   def vote
-    find_movie
-    @movie.rank += 1
+    find_movie.rank += 1
     @movie.save
     redirect_to movie_path(@movie)
   end

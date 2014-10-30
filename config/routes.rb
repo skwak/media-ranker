@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get     "/movies/:id",              to: "movies#show",            as: :movie
   get     "/movies/:id/edit",         to: "movies#edit",            as: :edit_movie
   patch   "/movies/:id",              to: "movies#update",          as: :update_movie
-  post    "/movies/:id ",             to: "movies#vote",            as: :movie_vote
+  post   "/movies/:id ",             to: "movies#vote",           as: :movie_vote
   delete   "/movies/:id",             to: "movies#destroy",         as: :delete_movie
 
   get     "/albums",                  to: "albums#index",           as: :albums

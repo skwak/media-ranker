@@ -12,7 +12,7 @@
     <tr>
       <td>Ranking: <%= movie.rank %></td>
       <td><%= link_to movie.name, movie_path(movie) %></td>
-      <td><%= button_to 'Upvote', movie_vote_path(movie), class: "btn btn-default" %></td>
+      <td><%= link_to 'Upvote', movie_vote_path (movie), class: "btn-lg btn-default" %></td>
     </tr>
     <% end %>
 
