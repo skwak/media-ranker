@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_filter :cache_buster
 
   def index
-    @movies = Movie.all.sort_by { |movie| movie.rank }.reverse
+    @movies = Movie.sort_by_rank
   end
 
   def new
