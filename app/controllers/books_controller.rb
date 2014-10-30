@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_filter :cache_buster
 
   def index
-    @books = Book.all.sort_by { |book| book.rank }.reverse
+    @books = Book.sort_by_rank
   end
 
   def new
