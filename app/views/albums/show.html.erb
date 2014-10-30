@@ -11,7 +11,7 @@
 
 <div class="btn-group btn-group-md">
   <%= link_to "Edit #{@album.name}", edit_album_path(@album), class: "btn btn-default" %>
-  <%= link_to "Delete #{@album.name}", delete_album_path(@album), method: :delete, class: "btn btn-default" %>
+  <%= link_to "Delete #{@album.name}", delete_album_path(@album), method: :delete, class: "btn btn-default delete-button" %>
   <%= link_to "All album", albums_path, class: "btn btn-default" %>
   <%= link_to "See all media", home_path, class: "btn btn-default" %>
 </div>
