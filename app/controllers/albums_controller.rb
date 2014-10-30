@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_filter :set_cache_buster
+  before_filter :cache_buster
 
   def index
     @albums = Album.all.sort_by { |album| album.rank }.reverse

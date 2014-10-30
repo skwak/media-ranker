@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_filter :set_cache_buster
+  before_filter :cache_buster
 
   def index
     @movies = Movie.all.sort_by { |movie| movie.rank }.reverse
