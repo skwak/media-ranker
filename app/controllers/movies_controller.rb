@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_filter :set_cache_buster
 
   def index
     @movies = Movie.all.sort_by { |movie| movie.rank }.reverse
@@ -34,11 +35,10 @@ class MoviesController < ApplicationController
     end
   end
 
-
   def vote
     find_movie.rank += 1
     @movie.save
-    redirect_to movie_path(@movie)
+    redirect_to :back
   end
 
   def destroy

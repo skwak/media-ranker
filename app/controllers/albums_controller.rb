@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  before_filter :set_cache_buster
 
   def index
     @albums = Album.all.sort_by { |album| album.rank }.reverse
@@ -38,7 +39,7 @@ class AlbumsController < ApplicationController
     find_album
     @album.rank += 1
     @album.save
-    redirect_to album_path(@album)
+    redirect_to :back
   end
 
   def destroy
